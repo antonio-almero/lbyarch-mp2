@@ -15,7 +15,7 @@ saxpyASM:
     ; r9         <- Y
     ; (rsp + 40) <- Z
 
-    mov rbx, [rsp + 40]     ; transfering Z to rbx
+    mov rbx, [rsp + 40]     ; copying Z to rbx
     mov rcx, 0
     
 

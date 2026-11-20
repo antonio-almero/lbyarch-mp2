@@ -4,12 +4,25 @@
 - Almero, Antonio Alvaro
 - Marquez, John Thomas
 
-## Build & Run Instructions
+## Build Instructions
 ```
-build.bat
-main.exe [20|24|28|30]
+nasm -f win64 saxpyASM.asm -o saxpyASM.obj
+gcc main.c saxpyASM.obj -o main.exe
 ```
+Alternatively, you can run ```build.bat``` to compile the program
+
+## How to Run
+```
+main <exponent>
+```
+`<exponent>` is required and must be one of `20`, `24`, `28`, or `30`.
+The program uses vectors of size n = 2^exponent.
+
 In addition to 30 as an option for a large exponent of n, 28 is provided for machines that may not be able to process a vector size of 2<sup>30</sup>.
+
+## Device used for Testing
+AMD Ryzen 5 4600H  
+32 GB RAM
 
 ## n = 2<sup>20</sup>
 

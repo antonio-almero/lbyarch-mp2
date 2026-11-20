@@ -1,3 +1,9 @@
+/*
+	Almero, Antonio Alvaro
+ 	Marquez, John Thomas
+ 	LBYARCH, S30G
+*/
+
 #ifndef SAXPYC_H
 #define	SAXPYC_H
 

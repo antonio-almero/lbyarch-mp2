@@ -1,2 +1,6 @@
 *.exe
 *.obj
+.vs/
+MP2/
+x64/
+*.vcxproj.user

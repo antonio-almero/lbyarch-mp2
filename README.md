@@ -4,23 +4,36 @@
 - Almero, Antonio Alvaro
 - Marquez, John Thomas
 
-## Build Instructions
+## Build & Run Instructions
+
+Ensure `nasm.exe` and `gcc.exe` are added to your system's or user's PATH before proceeding.
+
+### Via Visual Studio
+1. Open `MP2.sln`
+2. Build solution (`Ctrl + Shift + B`)
+3. Open terminal (`` Ctrl + ` ``)
+4. Run `.\main.exe <exponent>`
+
+`<exponent>` is required and must be one of `20`, `24`, `28`, or `30`.
+The program uses vectors of size n = 2<sup>exponent</sup>.
+
+In addition to 30 as an option for a large exponent of n, 28 is provided for machines that may not be able to process a vector size of 2<sup>30</sup>.
+
+### Via File Explorer
+1. Open terminal at project root
+2. Compile source code 
 ```
 nasm -f win64 saxpyASM.asm -o saxpyASM.obj
 gcc main.c saxpyASM.obj -o main.exe
 ```
-Alternatively, you can run ```build.bat``` to compile the program
+Alternatively, you can run `build.bat` to compile the program.
 
-## How to Run
+3. Run executable file
 ```
-main <exponent>
+main.exe <exponent>
 ```
-`<exponent>` is required and must be one of `20`, `24`, `28`, or `30`.
-The program uses vectors of size n = 2^exponent.
 
-In addition to 30 as an option for a large exponent of n, 28 is provided for machines that may not be able to process a vector size of 2<sup>30</sup>.
-
-## Device used for Testing
+## Test Device Specifications
 AMD Ryzen 5 4600H  
 32 GB RAM
 

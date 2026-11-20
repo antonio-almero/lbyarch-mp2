@@ -7,15 +7,15 @@ global saxpyASM
 
 saxpyASM:
     
-    ; void saxpyASM(int n, float a, float *X, float *Y, float* Z)
+    ; void saxpyASM(int n, float a, float X[], float Y[], float Z[])
     ; Parameters:
-    ; rax <- n
-    ; xmm1 <- a
-    ; r8 <- X 
-    ; r9 <- Y
-    ; [rsp + 40] <- Z
+    ; rax        <- n
+    ; xmm1       <- a
+    ; r8         <- X 
+    ; r9         <- Y
+    ; (rsp + 40) <- Z
 
-    mov rbx, [rsp + 40] ; rbx contains Z
+    mov rbx, [rsp + 40]     ; transfering Z to rbx
     mov rcx, 0
     
 

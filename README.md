@@ -19,7 +19,7 @@ The program uses vectors of size n = 2<sup>exponent</sup>.
 
 In addition to 30 as an option for a large exponent of n, 28 is provided for machines that may not be able to process a vector size of 2<sup>30</sup>.
 
-### Via File Explorer
+### Via Command Prompt
 1. Open terminal at project root
 2. Compile source code 
 ```

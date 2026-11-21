@@ -42,7 +42,7 @@ AMD Ryzen 5 4600H
 ### Parameter Values and First 10 Rows of Z (n = 2<sup>20</sup>)
 ![20 Correctness Check](20.png)
 
-### Execution Speed Comparison (n = 2<sup>20</sup>)
+### Execution Time Comparison (n = 2<sup>20</sup>)
 | Run | C (ms) | Assembly (ms) |
 |---:|---:|---:|
 | 1 | 6.615400 | 0.919200 |
@@ -77,14 +77,14 @@ AMD Ryzen 5 4600H
 | 30 | 6.689200 | 2.706200 |
 | **Average** | **7.236850** | **2.103420** |
 
-Over 30 runs at n = 2<sup>20</sup>, the Assembly version was, on average, **244.05%** faster than the C version.
+Over 30 runs at n = 2<sup>20</sup>, the Assembly version was, on average, **3.44×** faster than the C version.
 
 ## n = 2<sup>24</sup>
 
 ### Parameter Values and First 10 Rows of Z (n = 2<sup>24</sup>)
 ![24 Correctness Check](24.png)
 
-### Execution Speed Comparison (n = 2<sup>24</sup>)
+### Execution Time Comparison (n = 2<sup>24</sup>)
 | Run | C (ms) | Assembly (ms) |
 |---:|---:|---:|
 | 1 | 141.851300 | 69.810300 |
@@ -119,14 +119,14 @@ Over 30 runs at n = 2<sup>20</sup>, the Assembly version was, on average, **244.
 | 30 | 136.575700 | 67.771700 |
 | **Average** | **119.251353** | **68.189143** |
 
-Over 30 runs at n = 2<sup>24</sup>, the Assembly version was, on average, **74.88%** faster than the C version.
+Over 30 runs at n = 2<sup>24</sup>, the Assembly version was, on average, **1.75×** faster than the C version.
 
 ## n = 2<sup>30</sup>
 
 ### Parameter Values and First 10 Rows of Z (n = 2<sup>30</sup>)
 ![30 Correctness Check](30.png)
 
-### Execution Speed Comparison (n = 2<sup>30</sup>)
+### Execution Time Comparison (n = 2<sup>30</sup>)
 | Run | C (ms) | Assembly (ms) |
 |---:|---:|---:|
 | 1 | 8274.161000 | 4581.151300 |
@@ -161,4 +161,12 @@ Over 30 runs at n = 2<sup>24</sup>, the Assembly version was, on average, **74.8
 | 30 | 7557.198900 | 4615.824500 |
 | **Average** | **7467.260567** | **4588.059187** |
 
-Over 30 runs at n = 2<sup>30</sup>, the Assembly version was, on average, **62.75%** faster than the C version.
+Over 30 runs at n = 2<sup>30</sup>, the Assembly version was, on average, **1.63×** faster than the C version.
+
+## Summary of Findings
+
+On average, the Assembly implementation achieved a geometric mean speedup of **2.14×** over the C program across the three tested input sizes. Its relative speedup fell from **3.44×** at 2<sup>20</sup> elements to **1.63×** at 2<sup>30</sup> elements.
+
+![Average Execution Time vs. Input Size Line Chart](linechart.png)
+
+As shown in the line chart, the Assembly kernel's performance advantage over the C kernel **shrank as the input size increased**.
